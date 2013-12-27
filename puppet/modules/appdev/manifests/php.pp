@@ -39,7 +39,8 @@ class appdev::php
 			'pear-Net-Curl',
 			'pecl-xhprof',
 			'phpunit-PHPUnit',
-			'phpunit-PHPUnit-MockObject'
+			'phpunit-PHPUnit-MockObject',
+			'process'
 		]:
 		require => [ Class['php::cli'], Yumrepo['epel'], Package['uuid-php'] ]
 	}

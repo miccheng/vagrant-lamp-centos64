@@ -1,6 +1,6 @@
 ---
 'appdev::root_pwd': 'media1'
-'appdev::dbname': 'appserver'
-'appdev::dbuser': 'appuser'
+'appdev::dbname': 'prayertime'
+'appdev::dbuser': 'sgpt'
 'appdev::dbpassword': 'media1'
-'appdev::app_folder': 'appdev'
+'appdev::app_folder': 'prayertime2'
