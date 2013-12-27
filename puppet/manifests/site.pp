@@ -2,8 +2,7 @@ class devserver{
 	class{ 'appdev': }
 	package{
 		[
-			'beanstalkd',
-			'phpMyAdmin'
+			'beanstalkd'
 		]:
 			ensure => present,
 			require => Yumrepo['epel']
