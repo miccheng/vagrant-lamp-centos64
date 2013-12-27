@@ -2,7 +2,10 @@ class devserver{
 	class{ 'appdev': }
 	package{
 		[
-			'beanstalkd'
+			'beanstalkd',
+			'mongodb',
+			'mongodb-server',
+			'php-pecl-mongo'
 		]:
 			ensure => present,
 			require => Yumrepo['epel']
@@ -10,10 +13,13 @@ class devserver{
 	}
 
 	service {
-		'beanstalkd':
+		[
+			'beanstalkd',
+			'mongod'
+		]:
 			ensure => running,
 			enable => true,
-			require => Package['beanstalkd']
+			require => Package['beanstalkd', 'mongodb', 'mongodb-server']
 			;
 	}
 }
